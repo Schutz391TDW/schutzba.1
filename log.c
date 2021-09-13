@@ -1,5 +1,3 @@
-!<arch>
-log.c/          0           0     0     644     3693      `
 //Andrew Schutzbach
 //CS 4760
 //Project 1
@@ -140,4 +138,3 @@ int savelog(char *fileName){
         	}
     	}
 }
-

@@ -1,13 +1,12 @@
 CC = gcc
-CFLAGS = -Wall -Werror
+CFLAGS = -g
+TARGET = driver
+SRC = driver.c log.h 
+OBJS = driver.o log.o
 
-all: driver
 
-drive: main.o
-	$(CC) $(CFLAGS) -o $@ $^
-
-main.o: main.c log.h
-	$(CC) $(CFLAGS) -c $<
+$ (TARGET): $(OBJS)
+	$(CC) $(CFLAGS) -o $(TARGET) $^
 
 clean:
-	rm -f driver main.o
+	/bin/rm '-f' *.o $(TARGET) *.log
